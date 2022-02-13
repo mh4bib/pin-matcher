@@ -9,6 +9,19 @@ function pinGenerate(){
     }
 }
 
-document.getElementById('calc-body').addEventListener('click', function(){
+document.getElementById('calc-body').addEventListener('click', function(e){
+    const pinNum = e.target.innerText;
+    const calcForm = document.getElementById('calc-form');
+    if(pinNum == 'C'){
+        calcForm.value = '';
+    }
+    else{
+        const previousCalc = calcForm.value;
+        const newCalc = previousCalc + pinNum;
+        calcForm.value = newCalc;
+        console.log(typeof newCalc);
+        return newCalc;
+    }
+    
 
 })
