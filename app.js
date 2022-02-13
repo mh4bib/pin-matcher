@@ -15,6 +15,9 @@ document.getElementById('calc-body').addEventListener('click', function(e){
     if(pinNum == 'C'){
         calcForm.value = '';
     }
+    else if(pinNum == '<'){
+        calcForm.value = calcForm.value.slice(0, -1);
+    }
     else{
         const previousCalc = calcForm.value;
         const newCalc = previousCalc + pinNum;
