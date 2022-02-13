@@ -1,6 +1,7 @@
 function pinGenerate(){
     document.getElementById('success-message').style.display = 'none'
     document.getElementById('error-message').style.display = 'none'
+    document.getElementById('calc-form').value = '';
     const pinNum = Math.round(Math.random()*10000);
     const pin = pinNum + '';
     if(pin.length<4){
